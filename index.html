@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basit Web Sitesi</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Hoş Geldiniz</h1>
+        <nav>
+            <ul>
+                <li><button onclick="showAdminLogin()" class="nav-button">Admin Girişi</button></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="admin-login" style="display: none;">
+            <h2>Admin Girişi</h2>
+            <form id="admin-form" onsubmit="loginAdmin(event)">
+                <label for="password">Şifre:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit" class="action-button">Giriş Yap</button>
+            </form>
+        </section>
+        <section id="upload-section" style="display: none;">
+            <h2>Dosya Yükleme</h2>
+            <form id="upload-form">
+                <input type="file" id="file-input" accept="image/*" required>
+                <button type="submit" class="action-button">Yükle</button>
+            </form>
+            <div id="upload-response"></div>
+        </section>
+        <section id="gallery">
+            <h2>Galeri</h2>
+            <div id="images-container"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Basit Web Sitesi. Tüm hakları saklıdır.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
